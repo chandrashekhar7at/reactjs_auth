@@ -1,0 +1,10 @@
+@keyframes example{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+.css-animation-manual{
+    animation-name: example;
+    animation-duration: 0.5s;
+    animation-iteration-count: 25;
+    animation-timing-function: linear;
+}
