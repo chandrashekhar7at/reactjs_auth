@@ -98,7 +98,7 @@ const Signup = () => {
         if(fullnameerror==='' && phoneerror === '' && emailerror === '' && passworderror==='' && repeatPassworderror===''){
             try {
                 dispatch(formfillingStart())
-                const data = await fetch('http://auth.jiospin.info/auth',{
+                const data = await fetch('http://auth.jiospin.info/auth/signup',{
                     method:'POST',
                     headers:{
                         'Content-type':'application/json'
