@@ -130,7 +130,9 @@ const Signup = () => {
         e.preventDefault()
         try {
             const d = await fetch('http://auth.jiospin.info/auth/demofile',{
-                method:'GET'
+                method:'GET',
+                credentials:'include',
+
             })
             const d1 = await d.json();
             console.log("response  ------ ",d1)
