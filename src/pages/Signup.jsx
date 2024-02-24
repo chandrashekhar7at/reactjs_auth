@@ -99,15 +99,15 @@ const Signup = () => {
             try {
                 dispatch(formfillingStart())
                 const data = await fetch('http://auth.jiospin.info/auth/signup',{
-                    method:'GET',
-                    // headers:{
-                    //     'Content-type':'application/json'
-                    // },
-                    // credentials:'include',
-                    // mode: 'no-cors',
-                    // body:JSON.stringify({
-                    //     fullname,phone,email,password
-                    // })
+                    method:'POST',
+                    headers:{
+                        'Content-type':'application/json'
+                    },
+                    credentials:'include',
+                    mode: 'no-cors',
+                    body:JSON.stringify({
+                        fullname,phone,email,password
+                    })
                 })
                 const resdata = await data.json()
                 if(resdata.success === true){
