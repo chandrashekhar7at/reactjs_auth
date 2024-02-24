@@ -103,6 +103,7 @@ const Signup = () => {
                     headers:{
                         'Content-type':'application/json'
                     },
+                    mode:'no-cors',
                     credentials:'include',
                     body:JSON.stringify({
                         fullname,phone,email,password
@@ -125,14 +126,14 @@ const Signup = () => {
             }
         }
     }
-
+    
     const handleFirstSubmit = async(e)=>{
         e.preventDefault()
         try {
             const d = await fetch('http://auth.jiospin.info/auth/demofile',{
                 method:'GET',
                 credentials:'include',
-
+                mode:'no-cors',
             })
             const d1 = await d.json();
             console.log("response  ------ ",d1)
