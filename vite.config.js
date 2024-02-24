@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   server:{
     proxy:{
-      '/auth':'https://auth.jiospin.info'
+      '/api':'https://www.auth.jiospin.info'
     }
   },
   plugins: [react()],
