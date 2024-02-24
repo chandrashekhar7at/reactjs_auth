@@ -11,7 +11,6 @@ const Signup = () => {
     const [password,setPassword] = useState("")
     const [repeatpassword,setRepeatPassword] = useState("")
     const navigate = useNavigate()
-    console.log("----->>>",fullname,phone,email,password,repeatpassword);
 
     useEffect(()=>{
         dispatch(formfillingError(''))
@@ -94,15 +93,11 @@ const Signup = () => {
         }
     }
 
-    console.log('clickedoutside-------------')
     const handleSubmitForm = async(e)=>{
-        console.log('clicked1-------------')
         e.preventDefault()
         if(fullnameerror==='' && phoneerror === '' && emailerror === '' && passworderror==='' && repeatPassworderror===''){
-            console.log('clicked2-------------')
             try {
                 dispatch(formfillingStart())
-                console.log('clicked123-------------')
                 const data = await fetch('http://auth.jiospin.info/auth',{
                     method:'GET',
                     headers:{
@@ -114,9 +109,7 @@ const Signup = () => {
                         fullname,phone,email,password
                     })
                 })
-                console.log('clicked444----------------')
                 const resdata = await data.json()
-                console.log("---->",resdata)
                 if(resdata.success === true){
                     dispatch(formfillingSuccess(resdata.restdata))
                     setFullname('')
@@ -127,9 +120,8 @@ const Signup = () => {
                     navigate('/dashboard')
                     return;
                 }
-                // dispatch(formfillingError(resdata.message))
+                dispatch(formfillingError(resdata.message))
             } catch (error) {
-                console.log("<------>",error)
                 dispatch(formfillingError(error.message))
             }
         }
