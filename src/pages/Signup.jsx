@@ -132,7 +132,8 @@ const Signup = () => {
         try {
             const d = await fetch('http://auth.jiospin.info/auth/demofile',{
                 method:'GET',
-                // credentials:'include',
+                credentials:'include',
+                mode:'same-origin'
             })
             const d1 = await d.json();
             console.log("response  ------ ",d1)
