@@ -9,7 +9,7 @@ const Home = () => {
     <div className="bg-gradient h-screen text-white flex items-center flex-col">
       <div className="shadow-2xl shadow-pink-950 h-[250px] w-64 flex justify-center items-center rounded-full mt-40">
         <img
-          src="http://auth.jiospin.info/public/spinwheel.jpg"
+          src="https://auth.jiospin.info/public/spinwheel.jpg"
           alt="spinwheel"
           className="w-56 h-56 rounded-full animate-spin"
         />

@@ -53,7 +53,7 @@ const PaymentPage = () => {
    const handleLogout = async(e)=>{
         e.preventDefault()
         try {
-            const logoutdata = await fetch('http://auth.jiospin.info/auth/logout',{
+            const logoutdata = await fetch('https://auth.jiospin.info/auth/logout',{
                 method:'POST',
                 credentials:'include',
                 headers:{

@@ -37,7 +37,7 @@ const Signin = () => {
         if(phoneerror === '' && passworderror===''){
             try {
                 dispatch(formfillingStart())
-                const data = await fetch('http://auth.jiospin.info/auth/signin',{
+                const data = await fetch('https://auth.jiospin.info/auth/signin',{
                     method:'POST',
                     headers:{
                         'Content-type':'application/json'

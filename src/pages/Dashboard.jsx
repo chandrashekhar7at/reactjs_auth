@@ -70,7 +70,7 @@ const Dashboard = () => {
             }
             setSpinResult(result)
             try {
-                const data = await fetch(`http://auth.jiospin.info/auth/newwinning/${currentUser._id}`,{
+                const data = await fetch(`https://auth.jiospin.info/auth/newwinning/${currentUser._id}`,{
                     method:'POST',
                     credentials:'include',
                     headers:{
