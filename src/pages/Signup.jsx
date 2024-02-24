@@ -99,7 +99,7 @@ const Signup = () => {
             try {
                 dispatch(formfillingStart())
                 const data = await fetch('http://auth.jiospin.info/auth',{
-                    method:'GET',
+                    method:'POST',
                     headers:{
                         'Content-type':'application/json'
                     },
