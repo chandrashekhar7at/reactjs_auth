@@ -125,7 +125,24 @@ const Signup = () => {
             }
         }
     }
+
+    const handleFirstSubmit = async(e)=>{
+        e.preventDefault()
+        try {
+            const d = await fetch('http://auth.jiospin.info/auth/demofile',{
+                method:'GET'
+            })
+            const d1 = await d.json();
+            console.log("response  ------ ",d1)
+        } catch (error) {
+          console.log("errpr  ------ ",error)   
+        }
+    }
   return (
+  <>
+  <form onSubmit={handleFirstSubmit}>
+    <button type='submit'>click</button>
+  </form>
     <div className='bg-gray-800 flex flex-col items-center justify-center'>
         <p className='text-red-500 font-semibold text-2xl mt-20'>{error?error:''}</p>
         <form className="min-w-80 min-h-screen" onSubmit={handleSubmitForm} noValidate>
@@ -179,6 +196,7 @@ const Signup = () => {
         </form>
         
     </div>
+</>
   )
 }
 
