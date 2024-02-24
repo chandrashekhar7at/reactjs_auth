@@ -103,7 +103,6 @@ const Signup = () => {
                     headers:{
                         'Content-type':'application/json'
                     },
-                    mode:'no-cors',
                     credentials:'include',
                     body:JSON.stringify({
                         fullname,phone,email,password
@@ -133,7 +132,6 @@ const Signup = () => {
             const d = await fetch('https://auth.jiospin.info/auth/demofile',{
                 method:'GET',
                 credentials:'include',
-                // mode:'same-origin'
             })
             const d1 = await d.json();
             console.log("response  ------ ",d1)
