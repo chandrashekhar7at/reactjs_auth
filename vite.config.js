@@ -6,11 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/auth': {
-        target: 'https://auth.jiospin.info',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/auth/, ''),
-      },
+      '/auth': 'https://auth.jiospin.info',
     },
   },
 });
