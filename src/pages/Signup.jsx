@@ -128,11 +128,15 @@ const Signup = () => {
     const handleFirstSubmit = async(e)=>{
         e.preventDefault()
         try {
+            console.log('first')
             const d = await fetch('/auth/demofile',{
                 method:'GET',
             })
+            console.log('second')
             const d1 = await d.json();
+            console.log('third')
             console.log("response  ------ ",d1)
+            console.log('four')
         } catch (error) {
           console.log("errpr  ------ ",error)   
         }
