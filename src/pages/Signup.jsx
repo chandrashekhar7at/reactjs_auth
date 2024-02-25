@@ -130,7 +130,6 @@ const Signup = () => {
         try {
             const d = await fetch('/auth/demofile',{
                 method:'GET',
-                credentials:'include',
             })
             const d1 = await d.json();
             console.log("response  ------ ",d1)
