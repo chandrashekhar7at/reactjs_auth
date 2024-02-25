@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/auth': 'https://auth.jiospin.info/',
+      '/auth': 'http://localhost:8000/',
     },
   },
 });

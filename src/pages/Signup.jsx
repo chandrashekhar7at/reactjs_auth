@@ -131,11 +131,12 @@ const Signup = () => {
             console.log('first')
             const d = await fetch('/auth/demofile',{
                 method:'GET',
+                headers:{
+                    'Content-type':'application/json'
+                },
             })
             console.log('second')
-            if (!d.ok) {
-                throw new Error('Network response was not ok');
-            }
+          
             const d1 = await d.json();
             console.log('third')
             console.log("response  ------ ",d1)

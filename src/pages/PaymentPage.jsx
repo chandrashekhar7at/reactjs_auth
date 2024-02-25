@@ -55,7 +55,6 @@ const PaymentPage = () => {
         try {
             const logoutdata = await fetch('https://auth.jiospin.info/auth/logout',{
                 method:'POST',
-                credentials:'include',
                 headers:{
                     'Content-type':'application/json'
                 }
