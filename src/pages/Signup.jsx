@@ -98,12 +98,11 @@ const Signup = () => {
         if(fullnameerror==='' && phoneerror === '' && emailerror === '' && passworderror==='' && repeatPassworderror===''){
             try {
                 dispatch(formfillingStart())
-                const data = await fetch('https://auth.jiospin.info/auth/signup',{
+                const data = await fetch('/auth/signup',{
                     method:'POST',
                     headers:{
                         'Content-type':'application/json'
                     },
-                    credentials:'include',
                     body:JSON.stringify({
                         fullname,phone,email,password
                     })
@@ -129,7 +128,7 @@ const Signup = () => {
     const handleFirstSubmit = async(e)=>{
         e.preventDefault()
         try {
-            const d = await fetch('https://auth.jiospin.info/auth/demofile',{
+            const d = await fetch('/auth/demofile',{
                 method:'GET',
                 credentials:'include',
             })
