@@ -133,7 +133,7 @@ const Signup = () => {
                 method:'GET',
             })
             console.log('second')
-            if (!response.ok) {
+            if (!d.ok) {
                 throw new Error('Network response was not ok');
             }
             const d1 = await d.json();
