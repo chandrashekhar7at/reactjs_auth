@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/auth': 'http://auth.baseergaming.com',
+      // '/auth': 'http://auth.baseergaming.com',
     },
   },
 });
