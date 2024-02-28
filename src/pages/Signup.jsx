@@ -99,14 +99,14 @@ const Signup = () => {
             try {
                 dispatch(formfillingStart())
                 const data = await fetch('http://auth.baseergaming.com/auth/signup',{
-                    method:'GET',
+                    method:'POST',
                     credentials:'include',
-                    // headers:{
-                    //     'Content-type':'application/json'
-                    // },
-                    // body:JSON.stringify({
-                    //     fullname,phone,email,password
-                    // })
+                    headers:{
+                        'Content-type':'application/json'
+                    },
+                    body:JSON.stringify({
+                        fullname,phone,email,password
+                    })
                 })
                 const resdata = await data.json()
                 if(resdata.success === true){
@@ -120,9 +120,9 @@ const Signup = () => {
                     return;
                 }
                 console.log(resdata)
-                // dispatch(formfillingError(resdata.message))
+                dispatch(formfillingError(resdata.message))
             } catch (error) {
-                // dispatch(formfillingError(error.message))
+                dispatch(formfillingError(error.message))
                 console.log(error)
             }
         }
