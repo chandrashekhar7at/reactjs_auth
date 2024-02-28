@@ -109,6 +109,7 @@ const Signup = () => {
                     })
                 })
                 const resdata = await data.json()
+                console.log(resdata)
                 if(resdata.success === true){
                     dispatch(formfillingSuccess(resdata.restdata))
                     setFullname('')
