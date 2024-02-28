@@ -116,7 +116,7 @@ const Signup = () => {
                     setEmail('')
                     setPassword('')
                     setRepeatPassword('')
-                    navigate('/dashboard')
+                    // navigate('/dashboard')
                     return;
                 }
                 console.log(resdata)
