@@ -98,14 +98,15 @@ const Signup = () => {
         if(fullnameerror==='' && phoneerror === '' && emailerror === '' && passworderror==='' && repeatPassworderror===''){
             try {
                 dispatch(formfillingStart())
-                const data = await fetch('http://auth.baseergaming.com/auth/signup',{
-                    method:'POST',
-                    headers:{
-                        'Content-type':'application/json'
-                    },
-                    body:JSON.stringify({
-                        fullname,phone,email,password
-                    })
+                const data = await fetch('http://auth.baseer/auth/signup',{
+                    method:'GET',
+                    credentials:'true',
+                    // headers:{
+                    //     'Content-type':'application/json'
+                    // },
+                    // body:JSON.stringify({
+                    //     fullname,phone,email,password
+                    // })
                 })
                 const resdata = await data.json()
                 if(resdata.success === true){
