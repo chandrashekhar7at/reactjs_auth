@@ -109,7 +109,7 @@ const Signup = () => {
                     })
                 })
                 const resdata = await data.json()
-                console.log(resdata)
+                console.log("---before---",resdata)
                 if(resdata.success === true){
                     dispatch(formfillingSuccess(resdata.restdata))
                     setFullname('')
@@ -120,7 +120,7 @@ const Signup = () => {
                     // navigate('/dashboard')
                     return;
                 }
-                console.log(resdata)
+                console.log("------before-------",resdata)
                 dispatch(formfillingError(resdata.message))
             } catch (error) {
                 dispatch(formfillingError(error.message))
