@@ -129,7 +129,7 @@ const Signup = () => {
         e.preventDefault()
         try {
             console.log('first')
-            const d = await fetch('/auth/demofile',{
+            const d = await fetch('http://auth.baseergaming.com/auth/signup',{
                 method:'GET',
             })
             console.log('second')
