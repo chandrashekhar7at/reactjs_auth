@@ -22,7 +22,7 @@ const PaymentPage = () => {
         const funAmount = async()=>{
             if(amount === 100){
                 try {
-                    const data = await fetch(`http://auth.jiospin.info/auth/newwinning/${currentUser._id}`,{
+                    const data = await fetch(`/auth/newwinning/${currentUser._id}`,{
                         method:'POST',
                         headers:{
                             'Content-type':'application/json'
@@ -53,7 +53,7 @@ const PaymentPage = () => {
    const handleLogout = async(e)=>{
         e.preventDefault()
         try {
-            const logoutdata = await fetch('https://auth.jiospin.info/auth/logout',{
+            const logoutdata = await fetch('/auth/logout',{
                 method:'POST',
                 headers:{
                     'Content-type':'application/json'

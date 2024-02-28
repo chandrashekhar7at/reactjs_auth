@@ -35,7 +35,7 @@ const Withdrawl = () => {
     }
     if(winningbalance>=300){
         try {
-            const data = await fetch(`https://auth.jiospin.info/auth/newwinning/${currentUser._id}`,{
+            const data = await fetch(`/auth/newwinning/${currentUser._id}`,{
                 method:'POST',
                 headers:{
                     'Content-type':'application/json'

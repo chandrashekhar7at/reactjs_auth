@@ -131,9 +131,6 @@ const Signup = () => {
             console.log('first')
             const d = await fetch('/auth/demofile',{
                 method:'GET',
-                headers:{
-                    'Content-type':'application/json'
-                },
             })
             console.log('second')
           
