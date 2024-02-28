@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, redirect } from 'react-router-dom'
 import {formfillingStart,formfillingError,formfillingSuccess,fullnameError,phoneError,emailError,passwordError,repeatpasswordError} from "../redux/user/userSlice.js"
 import {useDispatch, useSelector} from "react-redux"
 import { useNavigate } from 'react-router-dom'
@@ -119,9 +119,11 @@ const Signup = () => {
                     navigate('/dashboard')
                     return;
                 }
-                dispatch(formfillingError(resdata.message))
+                console.log(resdata)
+                // dispatch(formfillingError(resdata.message))
             } catch (error) {
-                dispatch(formfillingError(error.message))
+                // dispatch(formfillingError(error.message))
+                console.log(error)
             }
         }
     }
