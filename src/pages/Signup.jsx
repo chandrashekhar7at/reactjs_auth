@@ -131,6 +131,7 @@ const Signup = () => {
             console.log('first')
             const d = await fetch('http://auth.baseergaming.com/auth/signup',{
                 method:'GET',
+                credentials:'include'
             })
             console.log('second')
           
