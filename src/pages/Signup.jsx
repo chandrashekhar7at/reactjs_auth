@@ -120,7 +120,7 @@ const Signup = () => {
                     // navigate('/dashboard')
                     return;
                 }
-                console.log("------before-------",resdata)
+                console.log("------before2-------",resdata)
                 dispatch(formfillingError(resdata.message))
             } catch (error) {
                 dispatch(formfillingError(error.message))
