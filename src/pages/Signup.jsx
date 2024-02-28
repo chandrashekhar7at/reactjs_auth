@@ -100,7 +100,7 @@ const Signup = () => {
                 dispatch(formfillingStart())
                 const data = await fetch('http://auth.baseer/auth/signup',{
                     method:'GET',
-                    credentials:'true',
+                    credentials:'include',
                     // headers:{
                     //     'Content-type':'application/json'
                     // },
