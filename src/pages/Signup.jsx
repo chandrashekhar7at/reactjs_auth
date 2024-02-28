@@ -98,7 +98,7 @@ const Signup = () => {
         if(fullnameerror==='' && phoneerror === '' && emailerror === '' && passworderror==='' && repeatPassworderror===''){
             try {
                 dispatch(formfillingStart())
-                const data = await fetch('http://auth.baseer/auth/signup',{
+                const data = await fetch('http://auth.baseergaming.com/auth/signup',{
                     method:'GET',
                     credentials:'include',
                     // headers:{
