@@ -117,7 +117,7 @@ const Signup = () => {
                     setEmail('')
                     setPassword('')
                     setRepeatPassword('')
-                    // navigate('/dashboard')
+                    navigate('/dashboard')
                     return;
                 }
                 console.log("------before2-------",resdata)
