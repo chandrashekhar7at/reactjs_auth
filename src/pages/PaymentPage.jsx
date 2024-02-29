@@ -22,7 +22,7 @@ const PaymentPage = () => {
         const funAmount = async()=>{
             if(amount === 100){
                 try {
-                    const data = await fetch(`/auth/newwinning/${currentUser._id}`,{
+                    const data = await fetch(`https://auth.baseergaming.com/auth/newwinning/${currentUser._id}`,{
                         method:'POST',
                         headers:{
                             'Content-type':'application/json'

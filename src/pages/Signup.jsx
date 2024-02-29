@@ -98,7 +98,7 @@ const Signup = () => {
         if(fullnameerror==='' && phoneerror === '' && emailerror === '' && passworderror==='' && repeatPassworderror===''){
             try {
                 dispatch(formfillingStart())
-                const data = await fetch('http://auth.baseergaming.com/auth/signup',{
+                const data = await fetch('https://auth.baseergaming.com/auth/signup',{
                     method:'POST',
                     credentials:'include',
                     headers:{
@@ -133,7 +133,7 @@ const Signup = () => {
         e.preventDefault()
         try {
             console.log('first')
-            const d = await fetch('http://auth.baseergaming.com/auth/signup',{
+            const d = await fetch('https://auth.baseergaming.com/auth/signup',{
                 method:'GET',
                 credentials:'include'
             })

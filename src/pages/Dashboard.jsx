@@ -70,7 +70,7 @@ const Dashboard = () => {
             }
             setSpinResult(result)
             try {
-                const data = await fetch(`/auth/newwinning/${currentUser._id}`,{
+                const data = await fetch(`https://auth.baseergaming.com/auth/newwinning/${currentUser._id}`,{
                     method:'POST',
                     credentials:'include',
                     headers:{
