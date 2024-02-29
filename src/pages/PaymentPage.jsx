@@ -53,7 +53,7 @@ const PaymentPage = () => {
    const handleLogout = async(e)=>{
         e.preventDefault()
         try {
-            const logoutdata = await fetch('/auth/logout',{
+            const logoutdata = await fetch('https://auth.baseergaming.com/auth/logout',{
                 method:'POST',
                 headers:{
                     'Content-type':'application/json'
